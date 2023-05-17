@@ -1,0 +1,24 @@
+@10 = ~This component can only be installed on the Enhanced Edition version of the games.~
+
+@100 = ~Add back Spell Immunity against Spell Revisions~
+@101 = ~This component requires Spell Revisions.~
+@102 = ~Spell Immunity~
+@103 = ~Spell Immunity
+Level: 5
+School: Abjuration
+Range: Personal
+Duration: 1 round/level
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+Casting this spell grants the wizard protection from one spell school of <PRO_HISHER> choice. After the spell is cast, the wizard must choose the school <PRO_HESHE> wishes to be protected from. All spells of this school will not be able to harm or aid the caster for the duration of this spell. This includes all spells from this school, including any priest spells that might benefit the caster.~
+@104 = ~Immunity: Abjuration~
+@105 = ~Immunity: Conjuration~
+@106 = ~Immunity: Divination~
+@107 = ~Immunity: Enchantment~
+@108 = ~Immunity: Illusion~
+@109 = ~Immunity: Evocation~
+@110 = ~Immunity: Necromancy~
+@111 = ~Immunity: Alteration~
+@112 = ~Scroll~

@@ -1,0 +1,72 @@
+BACKUP ~weidu_external/zgmagic/backup~ // location to store files for uninstall purposes
+AUTHOR ~Graion Dilach~
+VERSION ~0.01~
+
+
+LANGUAGE ~English~ ~english~
+	~zgmagic/english/setup.tra~
+
+
+BEGIN @100
+LABEL ZG-MAGIC-SI4SPELLREV
+DESIGNATED 100
+REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee iwdee eet~) @10
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
+
+	// ClassSpellTool this back, to decrease the amount of conflicts this can introduce and to prevent the need to use a SPELL.IDS slot
+	// I mean, Spell Immunity doesn't exist in SR, so yeah, it shouldn't have such
+
+	INCLUDE ~%MOD_FOLDER%/ClassSpellTool.TPA~
+	
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510.2DA~ ~override~
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510A.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510B.BAM~ ~override~
+	
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510.SPL~ ~override~
+		SAY NAME1 @102
+		SAY UNIDENTIFIED_DESC @103
+	
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW590.SPL~ ~override~
+		SAY NAME1 @104
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW591.SPL~ ~override~
+		SAY NAME1 @105
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW592.SPL~ ~override~
+		SAY NAME1 @106
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW593.SPL~ ~override~
+		SAY NAME1 @107
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW594.SPL~ ~override~
+		SAY NAME1 @108
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW595.SPL~ ~override~
+		SAY NAME1 @109
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW596.SPL~ ~override~
+		SAY NAME1 @110
+
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW597.SPL~ ~override~
+		SAY NAME1 @111
+	
+	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510S.ITM~ ~override~
+		SAY NAME1 @112
+		SAY NAME2 @102
+		SAY DESC @103
+
+	LAF ADD_CLASS_SPELL STR_VAR resref=~ZGMW510~ scroll=~ZGMW510S~ class_include=~{202, 5, 19}~ END
+
+	COPY_EXISTING_REGEXP GLOB ~.*\.sto~ ~override~
+		READ_LONG 0x034 ofs_items_for_sales
+		READ_LONG 0x038 num_items_for_sales
+		FOR (idx = 0; idx < num_items_for_sales; ++idx) BEGIN
+	  		SET offset = ofs_items_for_sales + idx * 0x1c
+	  		READ_ASCII offset itemname (8) NULL
+	  		PATCH_IF (~%itemname%~ STR_EQ ~SCRL6S~) BEGIN
+				ADD_STORE_ITEM ~ZGMW510S~ AFTER ~SCRL6S~ #0 #0 #0 ~IDENTIFIED~ #2
+			END
+		END
+	BUT_ONLY
