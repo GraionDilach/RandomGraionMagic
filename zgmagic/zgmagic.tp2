@@ -70,3 +70,67 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 			END
 		END
 	BUT_ONLY
+
+BEGIN @115
+LABEL ZG-MAGIC-TRUESIGHT4SPELLREV
+DESIGNATED 115
+REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee iwdee eet~) @10
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
+
+	// ClassSpellTool this back, to decrease the amount of conflicts this can introduce and to prevent the need to use a SPELL.IDS slot
+	// I mean, True Sight affects balance heavily and it's not what SR expects
+
+	INCLUDE ~%MOD_FOLDER%/ClassSpellTool.TPA~
+	
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEA.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEB.BAM~ ~override~
+
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEI.SPL~ ~override~
+		SAY NAME1 @116
+		SAY UNIDENTIFIED_DESC @117
+	
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEP.SPL~ ~override~
+		SAY NAME1 @116
+		SAY UNIDENTIFIED_DESC @118
+	
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEW.SPL~ ~override~
+		SAY NAME1 @116
+		SAY UNIDENTIFIED_DESC @119
+	
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEID.SPL~ ~override~
+		SAY NAME1 @116
+		SAY UNIDENTIFIED_DESC @117
+	
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEPD.SPL~ ~override~
+		SAY NAME1 @116
+		SAY UNIDENTIFIED_DESC @118
+	
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEWD.SPL~ ~override~
+		SAY NAME1 @116
+		SAY UNIDENTIFIED_DESC @119
+	
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYES.ITM~ ~override~
+		SAY NAME1 @112
+		SAY NAME2 @116
+		SAY DESC @119
+
+	// add priest
+	LAF ADD_CLASS_SPELL STR_VAR resref=~ZGMEYEP~ class_include=~{204, 208, 3, 11, 21}~ END
+
+	// add mage
+	LAF ADD_CLASS_SPELL STR_VAR resref=~ZGMEYEW~ scroll=~ZGMEYES~ class_include=~{202, 5, 19}~ END
+
+	COPY_EXISTING_REGEXP GLOB ~.*\.sto~ ~override~
+		READ_LONG 0x034 ofs_items_for_sales
+		READ_LONG 0x038 num_items_for_sales
+		FOR (idx = 0; idx < num_items_for_sales; ++idx) BEGIN
+	  		SET offset = ofs_items_for_sales + idx * 0x1c
+	  		READ_ASCII offset itemname (8) NULL
+	  		PATCH_IF (~%itemname%~ STR_EQ ~SCRL8W~) BEGIN
+				ADD_STORE_ITEM ~ZGMEYEWS~ AFTER ~SCRL8W~ #0 #0 #0 ~IDENTIFIED~ #2
+			END
+		END
+	BUT_ONLY
+
+	// add inquisitor
+	APPEND ~CLABPA04.2DA~ ~ZGTRUEVISION    **** ****  ****  ****  ****  **** **** **** GA_ZGMEYEI ****        ****  ****        ****  ****        ****  **** GA_ZGMEYEI  ****  ****        ****        ****  ****  ****        ****        GA_ZGMEYEI  ****  ****        ****        ****  ****        ****  ****        GA_ZGMEYEI  ****        ****        ****  ****  ****        ****        ****        GA_ZGMEYEI~

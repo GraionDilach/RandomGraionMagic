@@ -22,3 +22,38 @@ Casting this spell grants the wizard protection from one spell school of <PRO_HI
 @110 = ~Immunity: Necromancy~
 @111 = ~Immunity: Alteration~
 @112 = ~Scroll~
+
+@115 = ~Add back vanilla True Sight as a level higher spell against Spell Revisions~
+@116 = ~True Vision~
+@117 = ~True Vision
+(Divination)
+
+Range: Personal
+Duration: 1 turn
+Casting Time: 8
+Area of Effect: 120-ft. radius
+Saving Throw: None 
+
+When this spell is cast, an area roughly 120 ft. in radius around the caster will be affected. Instantly and once per round for 1 turn after this spell is cast, all hostile Illusion/Phantasm spells in the area of effect will be dispelled. The spells that are affected by this are Reflected Image, Invisibility, Mirror Image, Non-Detection, Improved Invisibility, Shadow Door, Mislead, Project Image, and Simulacrum. The area of effect is roughly a 120-ft. radius around the caster. The target's Magic Resistance, if any, does not come into effect with this spell. This spell only affects enemies, thus it is unable to dispel invisibility from a party member.~
+@118 = ~True Vision
+(Divination)
+
+Level: 6
+Range: Personal
+Duration: 1 turn
+Casting Time: 8
+Area of Effect: 120-ft. radius
+Saving Throw: None 
+
+When this spell is cast, an area roughly 120 ft. in radius around the caster will be affected. Instantly and once per round for 1 turn after this spell is cast, all hostile Illusion/Phantasm spells in the area of effect will be dispelled. The spells that are affected by this are Reflected Image, Invisibility, Mirror Image, Non-Detection, Improved Invisibility, Shadow Door, Mislead, Project Image, and Simulacrum. The area of effect is roughly a 120-ft. radius around the caster. The target's Magic Resistance, if any, does not come into effect with this spell. This spell only affects enemies, thus it is unable to dispel invisibility from a party member.~
+@119 = ~True Vision
+(Divination)
+
+Level: 7
+Range: Personal
+Duration: 1 turn
+Casting Time: 8
+Area of Effect: 120-ft. radius
+Saving Throw: None 
+
+When this spell is cast, an area roughly 120 ft. in radius around the caster will be affected. Instantly and once per round for 1 turn after this spell is cast, all hostile Illusion/Phantasm spells in the area of effect will be dispelled. The spells that are affected by this are Reflected Image, Invisibility, Mirror Image, Non-Detection, Improved Invisibility, Shadow Door, Mislead, Project Image, and Simulacrum. The area of effect is roughly a 120-ft. radius around the caster. The target's Magic Resistance, if any, does not come into effect with this spell. This spell only affects enemies, thus it is unable to dispel invisibility from a party member.~
