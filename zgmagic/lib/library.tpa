@@ -1,0 +1,17 @@
+DEFINE_PATCH_MACRO ADD_DICES_TO_OP17 BEGIN
+    GET_OFFSET_ARRAY headers SPL_V10_HEADERS
+    PHP_EACH headers AS int => hoff BEGIN
+        GET_OFFSET_ARRAY2 fx hoff SPL_V10_HEAD_EFFECTS
+        PHP_EACH fx AS intj => foff BEGIN
+		    READ_SHORT foff opcode
+			PATCH_IF (opcode = 17) BEGIN
+                READ_LONG (foff + 0x4) healvalue
+                READ_LONG (foff + 0x1C) healdicenum
+                READ_LONG (foff + 0x20) healdicesize
+                WRITE_LONG (foff + 0x4) (healvalue + (healdicenum * healdicesize))
+                WRITE_LONG (foff + 0x1C) 0
+                WRITE_LONG (foff + 0x20) 0
+			END
+		END
+    END
+END

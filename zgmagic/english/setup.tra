@@ -57,3 +57,49 @@ Area of Effect: 120-ft. radius
 Saving Throw: None 
 
 When this spell is cast, an area roughly 120 ft. in radius around the caster will be affected. Instantly and once per round for 1 turn after this spell is cast, all hostile Illusion/Phantasm spells in the area of effect will be dispelled. The spells that are affected by this are Reflected Image, Invisibility, Mirror Image, Non-Detection, Improved Invisibility, Shadow Door, Mislead, Project Image, and Simulacrum. The area of effect is roughly a 120-ft. radius around the caster. The target's Magic Resistance, if any, does not come into effect with this spell. This spell only affects enemies, thus it is unable to dispel invisibility from a party member.~
+
+@120 = ~Maximize Cure Wounds' effect in Spell Revisions~
+@121 = ~Cure Light Wounds
+Level: 1
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying <PRO_HISHER> hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 8 + 1/level points of damage sustained by the target creature (up to a maximum of 18).~
+@122 = ~Cure Moderate Wounds
+Level: 2
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying <PRO_HISHER> hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 16 + 2/level points of damage sustained by the target creature (up to a maximum of 36).~
+@123 = ~Cure Serious Wounds
+Level: 3
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying <PRO_HISHER> hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 24 + 3/level points of damage sustained by the target creature (up to a maximum of 54).~
+@124 = ~Cure Critical Wounds
+Level: 4
+School: Necromancy
+Sphere: Healing
+Range: Touch
+Duration: Permanent
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell, and laying <PRO_HISHER> hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 32 + 4/level points of damage sustained by the target creature (up to a maximum of 72).~
