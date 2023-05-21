@@ -120,6 +120,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 	// add mage
 	LAF ADD_CLASS_SPELL STR_VAR resref=~ZGMEYEW~ scroll=~ZGMEYES~ class_include=~{202, 5, 19}~ END
 
+	// add to shops where Mass Invisibility is already available
 	COPY_EXISTING_REGEXP GLOB ~.*\.sto~ ~override~
 		READ_LONG 0x034 ofs_items_for_sales
 		READ_LONG 0x038 num_items_for_sales
