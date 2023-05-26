@@ -257,3 +257,62 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 		LPM ADD_DICES_TO_OP17
 		SAY UNIDENTIFIED_DESC @122
 	BUT_ONLY
+
+
+BEGIN @125
+LABEL ZG-CWE-4-SRnIWD-SCS
+DESIGNATED 125
+REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee iwdee eet~) @10
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @126
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~CWELEMW.2DA~) @126
+
+// When SR's installed before the IWD spells, the IWD library's elemental_summoning function never runs. However,
+// because this is the function which creates the Conjure Water Elemental spell, this will be missing from the IDS
+// list, which then leads to Not_found errors when SCS's AI compoonents are installed with the IWD spell lists.
+// This component installs static variants of the new elementals, following SR rules on the spell themselves.
+// Needs to be ADD_SPELLed for SCS to detect it.
+
+	//install IWD2 water elemental art (only large exists in SoD)
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/art~ ~override~
+
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMCWEA.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMCWEB.BAM~ ~override~
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMCWEC.BAM~ ~override~
+	
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMWAE.ITM~ ~override~
+
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMWAE.EFF~ ~override~
+	
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMGWAE.EFF~ ~override~
+	
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMWAE.CRE~ ~override~
+		SAY NAME1 @129
+		SAY NAME2 @129
+	
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMGWAE.CRE~ ~override~
+		SAY NAME1 @130
+		SAY NAME2 @130
+	
+	ADD_SPELL ~%MOD_FOLDER%/srwaterelem4scs/ZGMWCWE.SPL~ 2 6 ~WIZARD_CONJURE_WATER_ELEMENTAL~
+		SAY NAME1 @127
+		SAY UNIDENTIFIED_DESC @128
+		SPRINT spell ~%DEST_RES%~
+	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMWCWES.ITM~ ~override~
+		SAY NAME1 @112
+		SAY NAME2 @127
+		SAY DESC @128
+		WRITE_ASCIIE 0xf6 ~%spell%~ #8
+		WRITE_ASCIIE 0x126 ~%spell%~ #8
+	
+	// add to shops where Conjure Fire Elemental is already available
+	COPY_EXISTING_REGEXP GLOB ~.*\.sto~ ~override~
+		READ_LONG 0x034 ofs_items_for_sales
+		READ_LONG 0x038 num_items_for_sales
+		FOR (idx = 0; idx < num_items_for_sales; ++idx) BEGIN
+	  		SET offset = ofs_items_for_sales + idx * 0x1c
+	  		READ_ASCII offset itemname (8) NULL
+	  		PATCH_IF (~%itemname%~ STR_EQ ~SCRL7X~) BEGIN
+				ADD_STORE_ITEM ~ZGMWCWES~ AFTER ~SCRL7X~ #0 #0 #0 ~IDENTIFIED~ #2
+			END
+		END
+	BUT_ONLY

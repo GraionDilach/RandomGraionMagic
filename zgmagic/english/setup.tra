@@ -103,3 +103,32 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 When casting this spell, and laying <PRO_HISHER> hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 32 + 4/level points of damage sustained by the target creature (up to a maximum of 72).~
+
+@125 = ~Install Spell Revisions standard Conjure Water Elemental when IWD spells from IWDification/SCS are installed.~
+@126 = ~This component requires both SR and IWD spells already in place!~
+@127 = ~Conjure Water Elemental~
+@128 = ~Conjure Water Elemental
+Level: 6
+School: Conjuration
+Range: Medium
+Duration: 1 turn + 1 round/level
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting a Conjure Water Elemental spell, the caster opens a special gate to the Elemental Plane of Water, and a water elemental is summoned to the vicinity of the spellcaster. Normally, an elemental with 12 hit dice will be conjured. At fifteenth level and above, however, the caster will be able to summon an elemental with 16 hit dice. The elemental will do the bidding of the caster until it is slain or the duration of the spell runs out. All of the commands given to the elemental are done so telepathically, so there is no time lost due to miscommunication, and it is not necessary to know the language of the summoned creature. It is particularly difficult to maintain a gate to the Inner Planes - there is a 15% chance that the portal opened by the caster will collapse before the elemental enters the Prime Material Plane.
+
+Water Elemental (12 Hit Dice):
+STR 17, DEX 9, CON 9, INT 9, WIS 9, CHA 9;  AL Neutral
+HP 96, AC 2, THAC0 9, Saving Throws 7/9/8/8/10
+2 Attacks Per Round, 1d20 Crushing +1d4 Cold Damage (Fist +4)
+
+Greater Water Elemental (16 Hit Dice):
+STR 19, DEX 9, CON 9, INT 9, WIS 9, CHA 9;  AL Neutral
+HP 128, AC 2, THAC0 5, Saving Throws 4/6/5/4/7
+2 Attacks Per Round, 1d20 Crushing +1d4 Cold Damage (Fist +4)
+
+Special Qualities (12 & 16 Hit Dice):
+Immune to normal weapons~
+@129 = ~Water Elemental~
+@130 = ~Greater Water Elemental~
