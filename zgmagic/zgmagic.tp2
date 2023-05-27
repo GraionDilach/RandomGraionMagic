@@ -109,7 +109,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 		SAY NAME1 @116
 		SAY UNIDENTIFIED_DESC @119
 	
-	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYES.ITM~ ~override~
+	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEWS.ITM~ ~override~
 		SAY NAME1 @112
 		SAY NAME2 @116
 		SAY DESC @119
@@ -118,7 +118,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 	LAF ADD_CLASS_SPELL STR_VAR resref=~ZGMEYEP~ class_include=~{204, 208, 3, 11, 21}~ END
 
 	// add mage
-	LAF ADD_CLASS_SPELL STR_VAR resref=~ZGMEYEW~ scroll=~ZGMEYES~ class_include=~{202, 5, 19}~ END
+	LAF ADD_CLASS_SPELL STR_VAR resref=~ZGMEYEW~ scroll=~ZGMEYEWS~ class_include=~{202, 5, 19}~ END
 
 	// add to shops where Mass Invisibility is already available
 	COPY_EXISTING_REGEXP GLOB ~.*\.sto~ ~override~
