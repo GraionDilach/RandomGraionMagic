@@ -104,7 +104,7 @@ Saving Throw: None
 
 When casting this spell, and laying <PRO_HISHER> hand upon a creature, the priest causes wounds and other injuries to the creature's body to be healed. The priest can restore 32 + 4/level points of damage sustained by the target creature (up to a maximum of 72).~
 
-@125 = ~Install Spell Revisions standard Conjure Water Elemental when IWD spells from IWDification/SCS are installed.~
+@125 = ~Install Spell Revisions standard Conjure Water Elemental when IWD spells from IWDification/SCS are installed~
 @126 = ~This component requires both SR and IWD spells already in place!~
 @127 = ~Conjure Water Elemental~
 @128 = ~Conjure Water Elemental
