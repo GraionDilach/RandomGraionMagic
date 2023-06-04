@@ -1,5 +1,7 @@
 # Random Graion Magic
 
+### [Forum thread on Gibberlings3](https://www.gibberlings3.net/forums/topic/36797-random-graion-magic/)
+
 This mod features various spell-related tweaks by Graion Dilach for games on the Infinity Engine.
 
 ## __COMPATIBILITY DISCLAIMER AND GENERAL INSTALL ORDER SUGGESTIONS__
