@@ -1,6 +1,6 @@
 @10 = ~This component can only be installed on the Enhanced Edition version of the games.~
 
-@100 = ~Add back Spell Immunity against Spell Revisions~
+@100 = ~Add back Spell Immunity against Spell Revisions [ClassSpellTool]~
 @101 = ~This component requires Spell Revisions.~
 @102 = ~Spell Immunity~
 @103 = ~Spell Immunity
@@ -23,7 +23,7 @@ Casting this spell grants the wizard protection from one spell school of <PRO_HI
 @111 = ~Immunity: Alteration~
 @112 = ~Scroll~
 
-@115 = ~Add back vanilla True Sight as a level higher spell against Spell Revisions~
+@115 = ~Add back vanilla True Sight as a level higher spell against Spell Revisions [ClassSpellTool]~
 @116 = ~True Vision~
 @117 = ~True Vision
 (Divination)
