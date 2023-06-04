@@ -4,6 +4,8 @@ This mod features various spell-related tweaks by Graion Dilach for games on the
 
 ## __COMPATIBILITY DISCLAIMER AND GENERAL INSTALL ORDER SUGGESTIONS__
 
+This mod is only compatible with the Enhanced Edition version of the games.
+
 For the best result, components which are compatibility fixes and/or tweak specific spells can be installed anytime after their dependencies are already in place and generally assume to be installed directly after them. (Immediately after Spell Revisions for SR-specific components, immediately after IWD spells for components covering an SR+IWD case, etc.).
 
 Unless specifically mentioned; Spell Revisions Revised isn't supported and results aren't guaranteed. The SR+IWD Spells components assume Spell Revisions was installed first.
@@ -30,7 +32,7 @@ This component changes the Cure ? Wounds spells so that they always roll the max
 
 ### Component 125: Install Spell Revisions standard Conjure Water Elemental when IWD spells from IWDification/SCS are installed
 
-When Spell Revision is installed before the IWD spells from the above mods, the IWD spell library will recognize the SR level 6 elemental additions and skips generating their own from the level 5 counterpart spells. However, because SR does not install water elementals at all, the level 6 Conjure Water Elemental spell never gets created, but because this spell is still expected by the default SCS AI settings, the user caan end up with occasional Not_found warnings during installation of the Smarter Mages component and the advanced AI components derived from it.
+When Spell Revision is installed before the IWD spells from the above mods, the IWD spell library will recognize the SR level 6 elemental additions and skips generating their own from the level 5 counterpart spells. However, because SR does not install water elementals at all, the level 6 Conjure Water Elemental spell never gets created, but because this spell is still expected by the default SCS AI settings, the user can end up with occasional Not_found warnings during installation of the Smarter Mages component and the advanced AI components derived from it.
 
 This component installs handcrafted variants of the water elementals, following Spell Revisions rules and using the Icewind Dale II water elemental artwork. Level 6 Conjure Water Elemental scrolls will appear in all shops where the level 6 Conjure Fire Elemental scroll is already available.
 
