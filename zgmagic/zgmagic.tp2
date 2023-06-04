@@ -1,6 +1,6 @@
 BACKUP ~weidu_external/zgmagic/backup~ // location to store files for uninstall purposes
 AUTHOR ~Graion Dilach~
-VERSION ~0.01~
+VERSION ~0.1~
 
 
 LANGUAGE ~English~ ~english~
@@ -262,13 +262,13 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 BEGIN @125
 LABEL ZG-CWE-4-SRnIWD-SCS
 DESIGNATED 125
-REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee iwdee eet~) @10
+REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee eet~) @10
 REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @126
 REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~CWELEMW.2DA~) @126
 
 // When SR's installed before the IWD spells, the IWD library's elemental_summoning function never runs. However,
 // because this is the function which creates the Conjure Water Elemental spell, this will be missing from the IDS
-// list, which then leads to Not_found errors when SCS's AI compoonents are installed with the IWD spell lists.
+// list, which then leads to Not_found errors when SCS's AI components are installed with the IWD spell lists.
 // This component installs static variants of the new elementals, following SR rules on the spell themselves.
 // Needs to be ADD_SPELLed for SCS to detect it.
 
