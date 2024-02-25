@@ -1,6 +1,6 @@
 BACKUP ~weidu_external/zgmagic/backup~ // location to store files for uninstall purposes
 AUTHOR ~Graion Dilach~
-VERSION ~0.1~
+VERSION ~0.11~
 
 
 LANGUAGE ~English~ ~english~
@@ -17,16 +17,16 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 	// I mean, Spell Immunity doesn't exist in SR, so yeah, it shouldn't have such
 
 	INCLUDE ~%MOD_FOLDER%/ClassSpellTool.TPA~
-	
+
 	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510.2DA~ ~override~
 	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510A.BAM~ ~override~
 	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510B.BAM~ ~override~
-	
+
 
 	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510.SPL~ ~override~
 		SAY NAME1 @102
 		SAY UNIDENTIFIED_DESC @103
-	
+
 
 	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW590.SPL~ ~override~
 		SAY NAME1 @104
@@ -51,7 +51,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 
 	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW597.SPL~ ~override~
 		SAY NAME1 @111
-	
+
 	COPY ~%MOD_FOLDER%/si4spellrev/ZGMW510S.ITM~ ~override~
 		SAY NAME1 @112
 		SAY NAME2 @102
@@ -81,34 +81,34 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 	// I mean, True Sight affects balance heavily and it's not what SR expects
 
 	INCLUDE ~%MOD_FOLDER%/ClassSpellTool.TPA~
-	
+
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEA.BAM~ ~override~
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEB.BAM~ ~override~
 
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEI.SPL~ ~override~
 		SAY NAME1 @116
 		SAY UNIDENTIFIED_DESC @117
-	
+
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEP.SPL~ ~override~
 		SAY NAME1 @116
 		SAY UNIDENTIFIED_DESC @118
-	
+
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEW.SPL~ ~override~
 		SAY NAME1 @116
 		SAY UNIDENTIFIED_DESC @119
-	
+
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEID.SPL~ ~override~
 		SAY NAME1 @116
 		SAY UNIDENTIFIED_DESC @117
-	
+
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEPD.SPL~ ~override~
 		SAY NAME1 @116
 		SAY UNIDENTIFIED_DESC @118
-	
+
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEWD.SPL~ ~override~
 		SAY NAME1 @116
 		SAY UNIDENTIFIED_DESC @119
-	
+
 	COPY ~%MOD_FOLDER%/ts4spellrev/ZGMEYEWS.ITM~ ~override~
 		SAY NAME1 @112
 		SAY NAME2 @116
@@ -164,7 +164,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 			TEXT_SPRINT $lines(~%row%~) ~%line%%LNL%~
 			SET $lines(~%row%~ ~size~) = STRING_LENGTH $lines(~%row%~)
 		END
-	  
+
 		// write normalized table to buffer
 		PATCH_IF (num_added > 0) BEGIN
 			DELETE_BYTES 0 BUFFER_LENGTH
@@ -195,7 +195,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 		LPM ADD_DICES_TO_OP17
 		SAY UNIDENTIFIED_DESC @121
 	BUT_ONLY
-	
+
 	LAF RES_NUM_OF_SPELL_NAME
 		STR_VAR spell_name = ~CLERIC_CURE_MEDIUM_WOUNDS~
 		RET spell_num = spell_num spell = spell_res
@@ -227,7 +227,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 		SAY UNIDENTIFIED_DESC @124
 	BUT_ONLY
 */
-	
+
 	LAF RES_NUM_OF_SPELL_NAME
 		STR_VAR spell_name = ~INNATE_CURE_LIGHT_WOUNDS~
 		RET spell_num = spell_num spell = spell_res
@@ -237,7 +237,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~dvimhere.mrk~) @101
 		LPM ADD_DICES_TO_OP17
 		SAY UNIDENTIFIED_DESC @121
 	BUT_ONLY
-	
+
 	LAF RES_NUM_OF_SPELL_NAME
 		STR_VAR spell_name = ~ULITHARID_CURE_SERIOUS_WOUNDS~
 		RET spell_num = spell_num spell = spell_res
@@ -278,21 +278,21 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~CWELEMW.2DA~) @126
 	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMCWEA.BAM~ ~override~
 	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMCWEB.BAM~ ~override~
 	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMCWEC.BAM~ ~override~
-	
+
 	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMWAE.ITM~ ~override~
 
 	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMWAE.EFF~ ~override~
-	
+
 	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMGWAE.EFF~ ~override~
-	
+
 	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMWAE.CRE~ ~override~
 		SAY NAME1 @129
 		SAY NAME2 @129
-	
+
 	COPY ~%MOD_FOLDER%/srwaterelem4scs/ZGMGWAE.CRE~ ~override~
 		SAY NAME1 @130
 		SAY NAME2 @130
-	
+
 	ADD_SPELL ~%MOD_FOLDER%/srwaterelem4scs/ZGMWCWE.SPL~ 2 6 ~WIZARD_CONJURE_WATER_ELEMENTAL~
 		SAY NAME1 @127
 		SAY UNIDENTIFIED_DESC @128
@@ -303,7 +303,7 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~CWELEMW.2DA~) @126
 		SAY DESC @128
 		WRITE_ASCIIE 0xf6 ~%spell%~ #8
 		WRITE_ASCIIE 0x126 ~%spell%~ #8
-	
+
 	// add to shops where Conjure Fire Elemental is already available
 	COPY_EXISTING_REGEXP GLOB ~.*\.sto~ ~override~
 		READ_LONG 0x034 ofs_items_for_sales
