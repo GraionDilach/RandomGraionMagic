@@ -32,7 +32,7 @@ Range: Personal
 Duration: 1 turn
 Casting Time: 8
 Area of Effect: 120-ft. radius
-Saving Throw: None 
+Saving Throw: None
 
 When this spell is cast, an area roughly 120 ft. in radius around the caster will be affected. Instantly and once per round for 1 turn after this spell is cast, all hostile Illusion/Phantasm spells in the area of effect will be dispelled. The spells that are affected by this are Reflected Image, Invisibility, Mirror Image, Non-Detection, Improved Invisibility, Shadow Door, Mislead, Project Image, and Simulacrum. The area of effect is roughly a 120-ft. radius around the caster. The target's Magic Resistance, if any, does not come into effect with this spell. This spell only affects enemies, thus it is unable to dispel invisibility from a party member.~
 @118 = ~True Vision
@@ -43,7 +43,7 @@ Range: Personal
 Duration: 1 turn
 Casting Time: 8
 Area of Effect: 120-ft. radius
-Saving Throw: None 
+Saving Throw: None
 
 When this spell is cast, an area roughly 120 ft. in radius around the caster will be affected. Instantly and once per round for 1 turn after this spell is cast, all hostile Illusion/Phantasm spells in the area of effect will be dispelled. The spells that are affected by this are Reflected Image, Invisibility, Mirror Image, Non-Detection, Improved Invisibility, Shadow Door, Mislead, Project Image, and Simulacrum. The area of effect is roughly a 120-ft. radius around the caster. The target's Magic Resistance, if any, does not come into effect with this spell. This spell only affects enemies, thus it is unable to dispel invisibility from a party member.~
 @119 = ~True Vision
@@ -54,7 +54,7 @@ Range: Personal
 Duration: 1 turn
 Casting Time: 8
 Area of Effect: 120-ft. radius
-Saving Throw: None 
+Saving Throw: None
 
 When this spell is cast, an area roughly 120 ft. in radius around the caster will be affected. Instantly and once per round for 1 turn after this spell is cast, all hostile Illusion/Phantasm spells in the area of effect will be dispelled. The spells that are affected by this are Reflected Image, Invisibility, Mirror Image, Non-Detection, Improved Invisibility, Shadow Door, Mislead, Project Image, and Simulacrum. The area of effect is roughly a 120-ft. radius around the caster. The target's Magic Resistance, if any, does not come into effect with this spell. This spell only affects enemies, thus it is unable to dispel invisibility from a party member.~
 
@@ -132,3 +132,5 @@ Special Qualities (12 & 16 Hit Dice):
 Immune to normal weapons~
 @129 = ~Water Elemental~
 @130 = ~Greater Water Elemental~
+@131 = ~Restore older functionality to Slow Poison so that it cures poison instead of slowing it down~
+@132 = ~This component requires the EE Fixpack.~

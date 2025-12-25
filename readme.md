@@ -36,11 +36,21 @@ When Spell Revision is installed before the IWD spells from the above mods, the 
 
 This component installs handcrafted variants of the water elementals, following Spell Revisions rules and using the Icewind Dale II water elemental artwork. Level 6 Conjure Water Elemental scrolls will appear in all shops where the level 6 Conjure Fire Elemental scroll is already available.
 
+__This issue was fixed with SCS v35/Talents of Faerun/IWDification v6.__
+
+### Component 131: Restore older functionality to Slow Poison so that it cures poison instead of slowing it down (BGEE/BG2EE/EET/IWDEE)
+
+In EE Fixpack, Slow Poison was changed to function as it's IWD counterpart, via slowing down poisons instead of curing them. This component basically restores the pre-EE Fixpack behaviour on BGs and allow IWDEE to function as the same. It does require EE Fixpack to be installed on all source games.
+
 ## Changelog
 
 ### Version 0.1
 
 Initial release featuring components #100, #115, #120 and #125.
+
+### Version 0.12
+
+Add component #131.
 
 ## Acknowledgements
 

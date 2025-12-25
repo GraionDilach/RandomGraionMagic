@@ -1,6 +1,6 @@
 BACKUP ~weidu_external/zgmagic/backup~ // location to store files for uninstall purposes
 AUTHOR ~Graion Dilach~
-VERSION ~0.11~
+VERSION ~0.12~
 
 
 LANGUAGE ~English~ ~english~
@@ -316,3 +316,13 @@ REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~CWELEMW.2DA~) @126
 			END
 		END
 	BUT_ONLY
+
+BEGIN @131
+LABEL ZG-RECURE-POISON-AGAINST-EEFIXPACK
+DESIGNATED 131
+REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee eet iwdee~) @10
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~eefixpack.tp2~ ~0~) @132
+
+COPY_EXISTING ~sppr212.spl~ ~override~
+  LAUNCH_PATCH_FUNCTION "ALTER_EFFECT" INT_VAR "match_opcode" = 329 "opcode" = 146 "parameter1" = 0 "parameter2" = 2 STR_VAR "resource" = ~#curepsn~ END
+BUT_ONLY
